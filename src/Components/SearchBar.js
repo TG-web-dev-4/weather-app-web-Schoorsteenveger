@@ -8,11 +8,10 @@ import { StyledButton } from './styled/Button.styled'
 const SearchBar = () => {
     return (
         <StyledSearchBar>
-            <StyledInput onChange={""} type="text" value={""} />
-            <StyledButton onClick={""} type="submit">Submit</StyledButton>
+            <StyledInput type="text" onChange={"" } placeholder="Search..." value= "" onKeyPress={"search"}/>
+            {/* <StyledButton onClick={""} type="submit">Submit</StyledButton> */}
         </StyledSearchBar>
     )
 }
 
 export default SearchBar
-

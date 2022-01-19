@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react'
 
 //Laat weatherdata ophalen/zien in card via search on location
 
-const WeatherCard = ({ city, date, icon, temp, min, max, humidity }) => {
+const WeatherCard = ({ city, icon, temp, min, max, humidity }) => {
 
     const [input, setInput] = useState("Londen")
-    const [weather, setWeather] = useState({})
-    const [error, setError] = useState(true)
     const [errorMessage, setErrorMessage] = useState('')
     // const [lat, setLat] = useState([]);
     // const [long, setLong] = useState([]);
-    const [data, setData] = useState([]);
+    const [location, setLocation] = useState([]);
     const apikey = process.env.REACT_APP_API_KEY
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
+
+
 
     useEffect(() => {
         const fetchData = () => {
@@ -23,7 +25,7 @@ const WeatherCard = ({ city, date, icon, temp, min, max, humidity }) => {
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&appid=${apikey}`)
                 .then(res => res.json())
                 .then(result => {
-                    setData(result)
+                    setLocation(result);
                     console.log(result);
                 });
         }
@@ -36,13 +38,11 @@ const WeatherCard = ({ city, date, icon, temp, min, max, humidity }) => {
             <div className="iconWeather">iconweather<img src="" alt="" /></div>
             <div className="displayDataResult">
                 <h2 className="name">City{city}</h2>
-                <p className="date">{date}</p>
-                <p className="temp">{temp}<span>&#8451;</span> </p>
-                <p className="min-temp">15{min}<span>&#8451;</span> </p>
-                <p className="max-temp">5{max}<span>&#8451;</span> </p>
-                <p className="humidity">{humidity}</p>
-
-
+                {/* <p className="date">10/1/2022{date}</p> */}
+                <p className="temp">Temp: {temp}<span>&#8451;</span> </p>
+                <p className="min-temp">Min-temp: 15{min}<span>&#8451;</span> </p>
+                <p className="max-temp">Max-temp: 5{max}<span>&#8451;</span> </p>
+                <p className="humidity">Humidity: 55 {humidity}</p>
             </div>
         </div>
 
