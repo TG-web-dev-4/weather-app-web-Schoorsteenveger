@@ -36,10 +36,10 @@ img {
     justify-content:center;
     flex-direction: column;
     margin: 100px 0 ;
-    height: 70vh;
-    width: 60vw;
+    height: 60vh;
+    width: auto;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
-    padding: 25px 30px;
+    padding: 25px 40px;
     border-radius: 3px;
     background-image: url(${myImage});
     background-color:blue;
@@ -48,13 +48,9 @@ img {
     position: relative;
 }
 
-/* .cardView:hover {
-  
-} */
-
 .displayResult, .iconWeather {
     background-color: transparent;
-    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
     padding: 10px 30px;
     color:white;
 }
