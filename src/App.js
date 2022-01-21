@@ -18,11 +18,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apikey}`)
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apikey}&units=metric`)
         const data = await response.json()
-
+        // console.log(data)
         setWeatherData(data)
-
 
       } catch (error) {
         console.log(error)
@@ -37,12 +36,12 @@ function App() {
     <div className="App">
       <GlobalStyles />
       <WeatherCard input={input} weatherData={weatherData} />
-      {/* < Accordion /> */}
+      
       <WeatherCardOverview />
       <SearchBar input={input} setInput={setInput} />
-      {/* <Routes>
-        
+      {/* <Routes>        
       </Routes> */}
+      <Accordion />
     </div>
   );
 }

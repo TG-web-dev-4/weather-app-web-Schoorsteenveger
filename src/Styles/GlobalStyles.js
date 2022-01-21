@@ -36,7 +36,7 @@ img {
     justify-content:center;
     flex-direction: column;
     margin: 100px 0 ;
-    height: 60vh;
+    height: auto;
     width: auto;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
     padding: 25px 40px;
@@ -48,11 +48,16 @@ img {
     position: relative;
 }
 
-.displayResult, .iconWeather {
-    background-color: transparent;
+.displayDataResult {
+    background-color: #3968dc45;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
-    padding: 10px 30px;
+    padding: 10px 60px;
     color:white;
+    display:flex;
+    justify-content:Start;
+    flex-direction:column;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .header {
