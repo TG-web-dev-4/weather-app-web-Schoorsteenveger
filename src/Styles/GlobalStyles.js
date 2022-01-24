@@ -74,6 +74,29 @@ img {
   }
 }
 
+.weatherDetail, .accordion {
+    display: flex;
+    justify-content: start;
+    justify-content: space-evenly;
+    background-color: transparent;
+    align-items: center;
+    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
+
+}
+
+.accordionExpand {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    padding: 5px;
+}
+
+.iconArrow {
+    font-size: 20px;
+    padding-left: 5px;
+}
 
 `
 export default GlobalStyles

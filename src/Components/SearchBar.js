@@ -8,8 +8,9 @@ import { StyledInput } from './styled/Input.styled'
 const SearchBar = ({ input, setInput }) => {
 
 
+
     const inputHandler = (event) => {
-        
+
         setInput(event.target.value)
     }
 
