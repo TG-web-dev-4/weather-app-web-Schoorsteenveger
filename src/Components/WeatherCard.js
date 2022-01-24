@@ -50,7 +50,7 @@ const WeatherCard = ({ weatherData }) => {
                     <p className="min-temp">Min-temp:{Math.round(min_temp)}<span>&#8451;</span> </p>
                     <p className="max-temp">Max-temp: {Math.round(max_temp)}<span>&#8451;</span> </p>
                     <p className="humidity">Humidity: {humidity}%</p>
-                    <div className='iconArrow'>Weekly Details <MdEast onClick={""} /></div>
+                        <div className='iconArrow'><p>Weekly Details</p> <MdEast onClick={""} /></div>
                 </div>
 
 

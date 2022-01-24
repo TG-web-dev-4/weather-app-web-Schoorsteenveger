@@ -24,7 +24,7 @@ body {
 }
 
 p {
-    line-height: 1.5;
+    line-height: 0.2;
 }
 
 img {
@@ -51,13 +51,15 @@ img {
 .displayDataResult {
     background-color: #3968dc45;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
-    padding: 10px 60px;
+    padding: 65px 60px;
     color:white;
     display:flex;
     justify-content:Start;
     flex-direction:column;
     text-transform: uppercase;
     font-weight: bold;
+    position: relative;
+    margin-bottom:15px;
 }
 
 .header {
@@ -81,6 +83,7 @@ img {
     background-color: transparent;
     align-items: center;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
+    margin: 10px;
 
 }
 
@@ -94,8 +97,21 @@ img {
 }
 
 .iconArrow {
-    font-size: 20px;
-    padding-left: 5px;
+    font-size: 0.8em;
+    padding: 5px 4px;
+    margin-left: 5px 0;
+    background: black;
+    position:absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.iconArrow:hover{
+    background-color: greenyellow;
+    transition: ease-in 3ms;
+    cursor:pointer;
 }
 
 `

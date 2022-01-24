@@ -4,34 +4,17 @@ import { StyledInput } from './styled/Input.styled'
 // import { StyledButton } from './styled/Button.styled'
 
 
-
 const SearchBar = ({ input, setInput }) => {
-
-
-
     const inputHandler = (event) => {
-
-        setInput(event.target.value)
+        if (event.onKeyPress !== "Enter") return;
+        setInput(input)
     }
-
-    return (
-        <StyledSearchBar>
-            {/* <input type="text" placeholder="search city" value={input} onChange={inputHandler} /> */}
-            <StyledInput type="text" placeholder="Search..." value={input} onChange={inputHandler} onKeyPress={inputHandler} />
-            {/* <StyledInput type="text" placeholder="Search..." value={input} onKeyPress={inputHandler} /> */}
-            {/* <StyledButton onClick={""} type="submit">Submit</StyledButton> */}
-        </StyledSearchBar>
-    )
+    return <StyledSearchBar>
+        <StyledInput type="text" className="search_bar" placeholder="Search..." onChange={(event) => setInput(event.target.value)} value={input} onKeyPress={inputHandler}
+        />
+        {/* <StyledInput type="text" placeholder="Search..." value={input} onKeyPress={inputHandler} /> */}
+        {/* <StyledButton onClick={""} type="submit">Submit</StyledButton> */}
+    </StyledSearchBar>;
 }
 
-export default SearchBar
-
-// const inputHandler = (event) => {
-//     //     if (event.key === "Enter") {
-//     //         event.preventDefault();
-//     //     } else {
-//     //         setInput(event.target.value)
-//     //         console.log(setInput)
-//     //     }
-
-//     // }
+export default SearchBar;
