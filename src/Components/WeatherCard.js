@@ -4,29 +4,27 @@ import { MdEast } from "react-icons/md";
 
 //Laat weatherdata ophalen/zien in card via search on location
 
-const WeatherCard = ({ weatherData }) => {
+const WeatherCard = ({ weatherData, weatherDetails }) => {
 
     console.log('WEATHERDATA', weatherData)
+    console.log('WEATHERDETAILS', weatherDetails)
 
-    const coord = weatherData.coord
+    // const currentcoord = weatherDetails.coord
     const city = weatherData?.name
     const temp = weatherData?.main?.temp
     const min_temp = weatherData?.main?.temp_min
     const max_temp = weatherData?.main?.temp_max
     const humidity = weatherData?.main?.humidity
-    // const weathericon = weatherData?.weather?.icon
-
-
-    // console.log('LOG OF DATA', coord, weather, temp, main, min_temp, max_temp, humidity)
-
-
-    // const [errorMessage, setErrorMessage] = useState('')
-
-
+    // const weatherDetails = weatherDetails.data
 
     const current = new Date();
     const date = `${current.getDate()} /${current.getMonth() + 1}/${current.getFullYear()}`;
 
+    // click takes coord and displays weatherdetails on accordion
+
+    // const showWeatherDetails = ({weatherDetails}) => {
+    //     const clickHandler();
+    // };
 
 
     return (
@@ -50,7 +48,7 @@ const WeatherCard = ({ weatherData }) => {
                     <p className="min-temp">Min-temp:{Math.round(min_temp)}<span>&#8451;</span> </p>
                     <p className="max-temp">Max-temp: {Math.round(max_temp)}<span>&#8451;</span> </p>
                     <p className="humidity">Humidity: {humidity}%</p>
-                        <div className='iconArrow'><p>Weekly Details</p> <MdEast onClick={""} /></div>
+                    <div className='containerIconArrow'><p>Weekly Details</p> <MdEast className='iconArrowBtn' onChange={""} onClick={""} />Sayhello</div>
                 </div>
 
 

@@ -83,20 +83,24 @@ img {
     background-color: transparent;
     align-items: center;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
-    margin: 10px;
+    margin: 0;
+    padding: 10px;
+    
 
 }
 
 .accordionExpand {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
     background-color: white;
     align-items: center;
-    padding: 5px;
+    font-size: 14px;
+    align-items: stretch;
+    margin: 0 auto;
+    
 }
 
-.iconArrow {
+.containerIconArrow {
     font-size: 0.8em;
     padding: 5px 4px;
     margin-left: 5px 0;
@@ -108,10 +112,18 @@ img {
     text-align: center;
 }
 
-.iconArrow:hover{
+.containerIconArrow:hover{
     background-color: greenyellow;
     transition: ease-in 3ms;
     cursor:pointer;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+ 
+  text-align: center;
+  padding: 15px;
+  
 }
 
 `
