@@ -7,13 +7,15 @@ import WeatherCardDetail from "./Components/WeatherCardDetail";
 import SearchBar from "./Components/SearchBar";
 import Header from "./Components/Header";
 import Accordion from './Components/Accordion';
+import Accordioncopy from './Components/Accordioncopy';
+import WeatherDetailsScreen from './Pages/WeatherDetailsScreen';
 
 
 function App() {
   const apikey = process.env.REACT_APP_API_KEY
   const [input, setInput] = useState('');
   const [weatherData, setWeatherData] = useState([]);
-  const [weatherDetails, setweatherDetails] = useState([])
+  const [weatherDetails, setweatherDetails] = useState(null)
   const [coord, setCoord] = useState("");
   // const [lat, setLat] = useState([]);
   // const [long, setLong] = useState([]);
@@ -42,13 +44,15 @@ function App() {
 
 // weekly Data voor accordion
   useEffect(() => {
+    console.log('WEATHER DETAILS USEEFFECT', weatherDetails, weatherData)
+    console.log('COORD INSIDE USEFFECT', coord)
     const fetchWeeklyData = async () => {
       try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&exclude=hourly,minutely&appid=${apikey}&units=metric`)
 
         const data = await response.json()
 
-        console.log(data)
+        console.log('DATA INSIDE USEEFFECT',data)
         setweatherDetails(data)
         
       } catch (error) {
@@ -65,9 +69,10 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
-      <WeatherCard input={input} weatherData={weatherData} weatherDetails={ weatherDetails}/>
+      <WeatherCard input={input} weatherData={weatherData}/>
       <SearchBar input={input} setInput={setInput} />
-      <Accordion weatherDetails={weatherDetails} />
+      {weatherDetails && <WeatherDetailsScreen weatherDetails={weatherDetails}/>}
+    
     </div>
   );
 }

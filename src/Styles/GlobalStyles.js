@@ -76,55 +76,5 @@ img {
   }
 }
 
-.weatherDetail, .accordion {
-    display: flex;
-    justify-content: start;
-    justify-content: space-evenly;
-    background-color: transparent;
-    align-items: center;
-    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
-    margin: 0;
-    padding: 10px;
-    
-
-}
-
-.accordionExpand {
-    display:grid;
-    grid-template-columns: auto auto auto auto auto;
-    background-color: white;
-    align-items: center;
-    font-size: 14px;
-    align-items: stretch;
-    margin: 0 auto;
-    
-}
-
-.containerIconArrow {
-    font-size: 0.8em;
-    padding: 5px 4px;
-    margin-left: 5px 0;
-    background: black;
-    position:absolute;
-    bottom:0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.containerIconArrow:hover{
-    background-color: greenyellow;
-    transition: ease-in 3ms;
-    cursor:pointer;
-}
-
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
- 
-  text-align: center;
-  padding: 15px;
-  
-}
-
 `
 export default GlobalStyles
