@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const styledHeader = styled.header`
-    text-align: center;
     display: flex;
     border: transparent;
     background-color: pink;

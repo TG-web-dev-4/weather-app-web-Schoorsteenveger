@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, Link } from "react-router-dom";
+import axios from 'axios'
 import GlobalStyles from "./Styles/GlobalStyles";
 import WeatherCard from "./Components/WeatherCard";
 import WeatherCardOverview from "./Components/WeatherCardOverview";
@@ -7,7 +8,6 @@ import WeatherCardDetail from "./Components/WeatherCardDetail";
 import SearchBar from "./Components/SearchBar";
 import Header from "./Components/Header";
 import Accordion from './Components/Accordion';
-import Accordioncopy from './Components/Accordioncopy';
 import WeatherDetailsScreen from './Pages/WeatherDetailsScreen';
 
 
@@ -31,7 +31,7 @@ function App() {
 
         setWeatherData(data)
         setCoord(data.coord)
-       
+
 
       } catch (error) {
         console.log(error)
@@ -42,7 +42,7 @@ function App() {
     // console.log(fetchData())
   }, [input])
 
-// weekly Data voor accordion
+  // weekly Data voor accordion
   useEffect(() => {
     console.log('WEATHER DETAILS USEEFFECT', weatherDetails, weatherData)
     console.log('COORD INSIDE USEFFECT', coord)
@@ -52,9 +52,9 @@ function App() {
 
         const data = await response.json()
 
-        console.log('DATA INSIDE USEEFFECT',data)
+        console.log('DATA INSIDE USEEFFECT', data)
         setweatherDetails(data)
-        
+
       } catch (error) {
         console.log(error)
 
@@ -69,10 +69,10 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
-      <WeatherCard input={input} weatherData={weatherData}/>
+      <WeatherCard input={input} weatherData={weatherData} />
       <SearchBar input={input} setInput={setInput} />
-      {weatherDetails && <WeatherDetailsScreen weatherDetails={weatherDetails}/>}
-    
+      {weatherDetails && <WeatherDetailsScreen weatherDetails={weatherDetails} />}
+
     </div>
   );
 }

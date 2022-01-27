@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
-import axios from 'axios'
 import Header from './Header'
 import SearchBar from './SearchBar'
+import WeatherCard from './WeatherCard'
 
 
 function WeatherCardOverview() {
     return (
-        <div>
-            
+        <div className='wrapper'>
+            <SearchBar />
+            <WeatherCard />
+
         </div>
     )
 }

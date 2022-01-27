@@ -7,8 +7,8 @@ justify-content: center;
 flex-direction: column;
 justify-items: center;
 align-content:center;
-margin: 50px 0;
-width: 100%;
+margin: 5em auto;
+max-width: 320px;
 height: 20px;
-padding: 5px;
+padding: 20px 5px;
 `

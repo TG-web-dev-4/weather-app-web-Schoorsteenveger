@@ -4,60 +4,88 @@ export const StyledAccordion = styled.div`
 
 .weatherDetail, .accordion {
     display: flex;
-    justify-content: start;
     justify-content: space-evenly;
-    background-color: transparent;
+    border-bottom: 5px solid blue;
     align-items: center;
-    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
-    margin: 0;
-    padding: 10px;
+    box-shadow: 0px 15px 20px -19px rgba(0,0,0,0.8);
+    padding: 6px;
+    margin: 0 auto;
+    background-color: rgba(230,280,0,0.4);
+    max-width: 320px;
 }
 
-.accordion{
+.accordion {
     cursor: pointer;
+    padding:1px 5px;
 }
 
-.accordionExpand  {
+.accordion.active {
+    background-color: blue;
+}
+
+.accordion:hover {
+    background-color: pink;
+    transition: all .2s ease-in-out; 
+}
+
+/* .accordionExpand {
     display: flex;
     background-color: white;
     align-items: center;
     font-size: 14px;
-    align-items: stretch;
-    margin: 0 auto;
     
-}
-.containerIconArrow {
-    font-size: 0.8em;
-    padding: 5px 4px;
-    margin-left: 5px 0;
-    background: black;
-    position:absolute;
-    bottom:0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
+    
+} */
 
-.containerIconArrow:hover{
-    background-color: greenyellow;
-    transition: ease-in 3ms;
-    cursor:pointer;
-}
-
-.drowpDownContent{
+.accordion.collapsed  {
     display:flex;
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 0.4s ease;
+    padding: 0 20px;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
   text-align: center;
-  padding: 15px;
+  padding: 5px 0;
   
 }
 
 .weatherIcon {
-    width: 2.5em;
-    height: 2.5em;
+    width: 4em;
 }
+
+.containerIconArrow{
+    background-color: #f2f2f2;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.iconDropDown {
+    transition: all .2s ease-in-out; 
+    font-size: 25px;
+}
+
+.iconDropDown:hover {
+    transform: scale(1.7); 
+}
+
+.containerIconArrow:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+    
+    
+}
+
+/* .dailyItems {
+    display: flex;
+    flex-direction:column;
+} */
+
 
 `
