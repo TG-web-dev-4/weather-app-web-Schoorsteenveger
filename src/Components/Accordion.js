@@ -21,7 +21,7 @@ function Accordion({ weatherDataPerDay }) {
 
     return (
 
-        <StyledAccordion className='weathercardDetail'>
+        <StyledAccordion>
             <StyledAccordion className={`accordion ${isActive ? "active" : "true"}`} onClick={() => setIsActive(!isActive)}>
 
                 <p><ConvertDate date={weatherDataPerDay.dt} /></p>

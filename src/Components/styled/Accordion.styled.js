@@ -8,15 +8,22 @@ export const StyledAccordion = styled.div`
     border-bottom: 5px solid blue;
     align-items: center;
     box-shadow: 0px 15px 20px -19px rgba(0,0,0,0.8);
-    padding: 6px;
+    padding: 20px 15px;
     margin: 0 auto;
     background-color: rgba(230,280,0,0.4);
-    max-width: 320px;
+    max-width: 300px;
 }
+
+/* @media (min-width: 992px) and (max-width : 1200px){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+} */
 
 .accordion {
     cursor: pointer;
-    padding:1px 5px;
 }
 
 .accordion.active {
@@ -43,13 +50,14 @@ export const StyledAccordion = styled.div`
     max-height: 0;
     overflow-y: hidden;
     transition: all 0.4s ease;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .grid-item {
   background-color: transparent;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px;
+  font-size: 14px;
   
 }
 
@@ -78,14 +86,15 @@ export const StyledAccordion = styled.div`
 .containerIconArrow:hover {
     background-color: greenyellow;
     cursor: pointer;
+    padding: 10px  5px;
     
     
 }
 
-/* .dailyItems {
+.dailyItems {
     display: flex;
     flex-direction:column;
-} */
+}
 
 
 `

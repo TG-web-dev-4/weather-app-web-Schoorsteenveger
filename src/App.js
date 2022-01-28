@@ -11,6 +11,7 @@ import Accordion from './Components/Accordion';
 import WeatherDetailsScreen from './Pages/WeatherDetailsScreen';
 
 
+
 function App() {
   const apikey = process.env.REACT_APP_API_KEY
   const [input, setInput] = useState('');
@@ -72,7 +73,6 @@ function App() {
       <WeatherCard input={input} weatherData={weatherData} />
       <SearchBar input={input} setInput={setInput} />
       {weatherDetails && <WeatherDetailsScreen weatherDetails={weatherDetails} />}
-
     </div>
   );
 }

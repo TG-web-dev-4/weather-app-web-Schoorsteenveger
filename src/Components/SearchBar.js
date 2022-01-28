@@ -11,8 +11,8 @@ const SearchBar = ({ input, setInput }) => {
 
 
     const inputHandler = (event) => {
-        
-    
+
+
         if (event.key === "Enter") setInput(searchInput)
         return
     }

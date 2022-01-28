@@ -6,10 +6,11 @@ function WeatherDetailsScreen({ weatherDetails }) {
 
   // console.log("WEATHERDETAILS INSIDE SCREEN", weatherDetails)
 
-  return <div className='dailyItems'>
+  return <div>
 
     {weatherDetails.daily.map((day, i) => {
       // console.log(`DAILY ARRAY ${i}: DAY OBJECT: ${day}`)
+      if ( i === 0 || i >= 8) return
       return <Accordion key={i + Math.random()} weatherDataPerDay={day} />
 
     })

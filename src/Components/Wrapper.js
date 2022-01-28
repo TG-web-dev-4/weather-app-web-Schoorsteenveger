@@ -1,11 +1,14 @@
-import React from 'react'
+import styled from "styled-components";
 
-function Wrapper(props) {
-    return (
-        <div className='wrapper'>
-           {props.children}
-        </div>
-    )
+export const Wrapper = styled.div`
+    min-width: 100%;
+
+    @media (min-width: 992px) {     
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
-export default Wrapper
+   
+
+`
+
