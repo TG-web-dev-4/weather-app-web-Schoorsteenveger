@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import myImage from '../../src/Assets/weatherbg.jpg';
 
 const StyledWeatherCard = styled.div`
 .cardView {

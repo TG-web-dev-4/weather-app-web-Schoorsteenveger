@@ -78,11 +78,5 @@ export const StyledAccordion = styled.div`
     padding: 10px  5px;   
 }
 
-/* .dailyItems {
-    display: flex;
-    flex-direction:column;
-    background-color: pink;
-} */
-
 
 `

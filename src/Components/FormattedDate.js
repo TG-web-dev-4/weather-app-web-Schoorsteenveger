@@ -1,4 +1,4 @@
-const FormattedDate= ({ date }) => {
+const FormattedDate = ({ date }) => {
     let unixTimestamp = date;
 
     const milliseconds = unixTimestamp * 1000;

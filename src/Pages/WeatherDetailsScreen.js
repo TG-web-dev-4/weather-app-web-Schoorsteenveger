@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import Accordion from '../Components/Accordion';
 
-
-
 function WeatherDetailsScreen({ weatherDetails }) {
 
-  // console.log("WEATHERDETAILS INSIDE SCREEN", weatherDetails)
 
   return <div className='containerAccordion'>
 
