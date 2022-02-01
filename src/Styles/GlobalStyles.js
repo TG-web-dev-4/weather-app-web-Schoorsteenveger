@@ -20,7 +20,7 @@ body {
     color: rgba (21, 26, 33);
     font-family: 'Lato', sans-serif;
     font-size:1.2em;
-    min-width: 100%;
+    width: 100%;
     display:flex;
     justify-content:center;
     align-items: center;
@@ -29,11 +29,11 @@ body {
 }
 
 
-@media  only screen and (min-width: 960px) {
+/* @media  only screen and (min-width: 960px) {
     display: grid;
     height: 100%;
     background-color: greenyellow;
-    }
+    } */
 
 p {
     line-height: 1.8;
@@ -43,13 +43,15 @@ img {
     width: 100%;
 }
 
+
 .cardView {
     display: flex;
     justify-content:center;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
     margin: 100px 0 ;
-    min-height: auto;
-    max-width: 768px;
+    max-width: 320px;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
     padding: 25px 30px;
     border-radius: 3px;
@@ -64,10 +66,7 @@ img {
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.8);
     padding: 65px 30px;
     color:white;
-    display: flex;
-    justify-content:center;
-    flex-direction:column;
-    align-items: stretch;
+    /* align-items: stretch; */
     text-transform: uppercase;
     font-weight: bold;
     height: auto;
@@ -104,6 +103,7 @@ img.weatherIcon {
     cursor: pointer;
     transition: ease-in 1ms;
 }
+
 
 `
 export default GlobalStyles

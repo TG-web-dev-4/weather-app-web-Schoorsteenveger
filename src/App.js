@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
+
 function App() {
   const apikey = process.env.REACT_APP_API_KEY
   const [input, setInput] = useState('');
@@ -67,10 +68,12 @@ function App() {
 
   return (
     <div className="App">
+    
       <GlobalStyles />
-      <WeatherCard input={input} weatherData={weatherData} />
       <SearchBar input={input} setInput={setInput} />
+      <WeatherCard input={input} weatherData={weatherData} />            
       {weatherDetails && <WeatherDetailsScreen weatherDetails={weatherDetails} />}
+      
     </div>
   );
 }
