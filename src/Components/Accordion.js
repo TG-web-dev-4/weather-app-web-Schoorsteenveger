@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import { FcAbout, FcExpand, FcFaq } from "react-icons/fc";
 import { StyledAccordion } from './styled/Accordion.styled';
-import moment from 'moment'
-import WeatherCardDetail from './WeatherCardDetail';
-import ConvertDate from './ConvertDate';
+import ConvertDate from './FormattedDate';
 
 
 function Accordion({ weatherDataPerDay }) {
 
     const [isActive, setIsActive] = useState(false)
-    // console.log("WEATHER DATA INSIDE ACCORDION")
-
     const morn_temp = weatherDataPerDay.temp.morn
     const day_temp = weatherDataPerDay.temp.day
     const day_eve = weatherDataPerDay.temp.eve

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { MdEast } from "react-icons/md";
 
+
+
 const WeatherCard = ({ weatherData }) => {
   
 

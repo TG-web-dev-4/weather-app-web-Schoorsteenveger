@@ -2,28 +2,27 @@ import styled from "styled-components";
 
 export const StyledAccordion = styled.div`
 
-.weatherDetail, .accordion {
+.weatherDetail  {
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 5px solid blue;
     align-items: center;
     box-shadow: 0px 15px 20px -19px rgba(0,0,0,0.8);
     padding: 20px 15px;
     margin: 0 auto;
     background-color: rgba(230,280,0,0.4);
-    max-width: 300px;
+    width: 300px;
+    
 }
 
-/* @media (min-width: 992px) and (max-width : 1200px){
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-
-} */
-
-.accordion {
-    cursor: pointer;
+ .accordion, .containerAccordion {
+     width: 29vmax;
+     cursor: pointer; 
+     display:flex;
+     justify-content: space-evenly;
+     border-bottom: 5px solid blue;
+     padding: 20px 15px;
+     align-items: center;
+     background-color: rgba(230,280,0,0.4);
 }
 
 .accordion.active {
@@ -31,18 +30,9 @@ export const StyledAccordion = styled.div`
 }
 
 .accordion:hover {
-    background-color: pink;
     transition: all .2s ease-in-out; 
+    background-color: blue;
 }
-
-/* .accordionExpand {
-    display: flex;
-    background-color: white;
-    align-items: center;
-    font-size: 14px;
-    
-    
-} */
 
 .accordion.collapsed  {
     display:flex;
@@ -54,7 +44,6 @@ export const StyledAccordion = styled.div`
 }
 
 .grid-item {
-  background-color: transparent;
   text-align: center;
   padding: 5px;
   font-size: 14px;
@@ -86,15 +75,14 @@ export const StyledAccordion = styled.div`
 .containerIconArrow:hover {
     background-color: greenyellow;
     cursor: pointer;
-    padding: 10px  5px;
-    
-    
+    padding: 10px  5px;   
 }
 
-.dailyItems {
+/* .dailyItems {
     display: flex;
     flex-direction:column;
-}
+    background-color: pink;
+} */
 
 
 `

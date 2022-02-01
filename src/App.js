@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, Link } from "react-router-dom";
-import axios from 'axios'
 import GlobalStyles from "./Styles/GlobalStyles";
 import WeatherCard from "./Components/WeatherCard";
 import WeatherCardOverview from "./Components/WeatherCardOverview";
-import WeatherCardDetail from "./Components/WeatherCardDetail";
 import SearchBar from "./Components/SearchBar";
 import Header from "./Components/Header";
 import Accordion from './Components/Accordion';
 import WeatherDetailsScreen from './Pages/WeatherDetailsScreen';
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 
@@ -18,8 +18,6 @@ function App() {
   const [weatherData, setWeatherData] = useState([]);
   const [weatherDetails, setweatherDetails] = useState(null)
   const [coord, setCoord] = useState("");
-  // const [lat, setLat] = useState([]);
-  // const [long, setLong] = useState([]);
 
 
   //weatherdata for weathercard
@@ -61,8 +59,8 @@ function App() {
 
       }
     }
-    if (coord) fetchWeeklyData(); // met if laadt pas als opgevraagd wordt door de user
-    // console.log(fetchWeeklyData())
+    if (coord) fetchWeeklyData(); /*met if laadt pas als opgevraagd wordt door de user
+    // console.log(fetchWeeklyData())*/
   }, [coord])
 
 
